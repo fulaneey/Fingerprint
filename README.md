@@ -82,6 +82,25 @@ Note: For this test we use a mysql database, but you can use any other database 
 ```sql
 /*create fingerprint database*/
 CREATE DATABASE fingerprint;
+### EXPECTED FUNCTIONALITY
+This software focuses on ADMIN and STAFF
+ADMIN ROLES
+-Enroll staff biometrics
+-Approve staff break request
+-Deny staff break request and include reason for denial
+
+STAFF ROLE
+-Sign-up new staff using Sign-Up link
+-Request break from Admin
+-View break request
+-Delete break request
+
+The system records staff attendance by capturing and recording every clock-in and clock-out
+Each staff is assigned a staff Id after sign-up
+At every clock-in, system automatically login staff to their dashboard after it captures staff fingerprint
+At every clock-out, system ought to automatically log-out staff from their dashboard.
+
+
 
 /*create users table, with id as primary key
 username, fullname columns and also nullable index and middle finger columns*/
