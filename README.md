@@ -76,12 +76,6 @@ For linux users, that will be /var/www/html or thereabouts.
 
 Visit http://localhost/FingerPrint or http://localhost
 depending on your web root configuration. I do advice to change the web root directly to the FingerPrint directory.
-
-Note: For this test we use a mysql database, but you can use any other database you want. You will need to have a database named `fingerprint`, with the below structure.
-
-```sql
-/*create fingerprint database*/
-CREATE DATABASE fingerprint;
 ### EXPECTED FUNCTIONALITY
 This software focuses on ADMIN and STAFF
 ADMIN ROLES
@@ -101,6 +95,11 @@ At every clock-in, system automatically login staff to their dashboard after it 
 At every clock-out, system ought to automatically log-out staff from their dashboard.
 
 
+Note: For this test we use a mysql database, but you can use any other database you want. You will need to have a database named `fingerprint`, with the below structure.
+
+```sql
+/*create fingerprint database*/
+CREATE DATABASE fingerprint;
 
 /*create users table, with id as primary key
 username, fullname columns and also nullable index and middle finger columns*/
